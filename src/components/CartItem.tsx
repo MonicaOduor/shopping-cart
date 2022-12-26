@@ -2,6 +2,7 @@ type CartItemProps = {
   id: number;
   quantity: number;
 };
+
 import { Stack } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingContext";
 import storeItems from "../data/items.json";
@@ -29,7 +30,7 @@ export default function CartItem({ id, quantity }: CartItemProps) {
         style={{ objectFit: "cover" }}
         className="img-fluid shopping-cart-img"
       />
-      <Stack gap={1}>
+      <Stack>
         <h5>{item.name}</h5>
         <small>
           {quantity} x {formatCurrency(item.price)}

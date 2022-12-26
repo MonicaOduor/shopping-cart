@@ -22,14 +22,18 @@ type ShoppingCartContext = {
   cartItems: CartItem[];
 };
 export const ShoppingContext = createContext({} as ShoppingCartContext);
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 export function useShoppingCart() {
   return useContext(ShoppingContext);
 }
 
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [cartIsOpen, setCartIsOpen] = useState(false);
+  const [cartItems, setCartItems] = useLocalStorage<CartItem[]>(
+    "shopping cart",
+    []
+  );
 
   const cartQuantity = cartItems.reduce(
     (quantity, item) => item.quantity + quantity,
@@ -47,7 +51,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   }
   function increaseCartQuantity(id: number) {
     setCartItems((currItems) => {
-      if (currItems.find((item) => item.id === id ) == null) {
+      if (currItems.find((item) => item.id === id) == null) {
         return [...currItems, { id, quantity: 1 }];
       } else {
         return currItems.map((item) =>
