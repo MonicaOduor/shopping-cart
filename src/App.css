@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 body{
   font-family: 'DM Sans', sans-serif !important;
@@ -14,7 +15,7 @@ body{
 }
 .navbar{
   transition: all 0.5s ease;
-  box-shadow: #bf6b4f 0px 0px 1.5px 0px;
+  border-bottom: 1px solid #f43b00;
 }
 .navlinks {
   font-weight: 500;
@@ -35,4 +36,11 @@ body{
 }
 .menu-icon:focus{
   outline: none !important;
+}
+.card-img{
+  transition: transform 0.3s;
+
+}
+.card-img:hover{
+  transform: rotate(30deg);
 }

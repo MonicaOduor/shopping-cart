@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Navigationbar() {
   return (
-    <Navbar className="navbar" expand="sm" sticky="top">
+    <Navbar className="navbar bg-white" expand="sm" sticky="top">
       <Container fluid>
         <Navbar.Brand>
           <span className="logo">Marcello</span>
