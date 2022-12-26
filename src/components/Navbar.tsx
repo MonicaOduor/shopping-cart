@@ -16,13 +16,12 @@ export default function Navigationbar() {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav>
-            <NavLink className="navlinks" to="/store">
+            <NavLink className="navlinks" to="/">
               Store
             </NavLink>
-            <NavLink className="navlinks" to="/">
+            <NavLink className="navlinks" to="/home">
               Home
             </NavLink>
-
             <NavLink className="navlinks" to="/about">
               About
             </NavLink>
