@@ -37,10 +37,22 @@ body{
 .menu-icon:focus{
   outline: none !important;
 }
+.card{
+  background: url('https://marcello.qodeinteractive.com/wp-content/themes/marcello/assets/img/noise.png');
+}
 .card-img{
   transition: transform 0.3s;
 
 }
 .card-img:hover{
   transform: rotate(30deg);
+}
+.btn-outline{
+  border-color: #f43b00 !important;
+  color: #f43b00 !important;
+  transition: all 0.2s ease-in;
+}
+.btn-outline:hover{
+  background-color: #f43b00 !important;
+  color: #fff !important;
 }

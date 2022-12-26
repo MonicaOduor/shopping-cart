@@ -3,60 +3,70 @@
         "id": 1,
         "name": "Caprici",
         "price": 1600,
+        "description": "Peeled tomato, cheese, mushrooms, red onion, cherry tomato, black olives, rocket",
         "imgUrl": "/images/1.png"
     },
     {
         "id": 2,
         "name": "Mediterrano",
         "price": 1800,
+        "description": "Peeled tomato, cheese, mushrooms, red onion, cherry tomato, black olives, rocket",
         "imgUrl": "/images/2.png"
     },
     {
         "id": 3,
         "name": "Campania",
         "price": 1900,
+        "description": "Peeled tomato, cheese, mushrooms, red onion, cherry tomato, black olives, rocket",
         "imgUrl": "/images/3.png"
     },
     {
         "id": 4,
         "name": "European",
         "price": 1500,
+        "description": "Peeled tomato, cheese, mushrooms, red onion, cherry tomato, black olives, rocket",
         "imgUrl": "/images/4.png"
     },
     {
         "id": 5,
         "name": "Neapolitan",
         "price": 1600,
+        "description": "Peeled tomato, cheese, mushrooms, red onion, cherry tomato, black olives, rocket",
         "imgUrl": "/images/5.png"
     },
     {
         "id": 6,
         "name": "Capricorno",
         "price": 1200,
+        "description": "Peeled tomato, cheese, mushrooms, red onion, cherry tomato, black olives, rocket",
         "imgUrl": "/images/6.png"
     },
     {
         "id": 7,
         "name": "Vesuvio",
         "price": 1800,
+        "description": "Peeled tomato, cheese, mushrooms, red onion, cherry tomato, black olives, rocket",
         "imgUrl": "/images/7.png"
     },
     {
         "id": 8,
         "name": "Botako",
         "price": 1400,
+        "description": "Peeled tomato, cheese, mushrooms, red onion, cherry tomato, black olives, rocket",
         "imgUrl": "/images/8.png"
     },
     {
         "id": 9,
         "name": "Parma",
         "price": 1600,
+        "description": "Peeled tomato, cheese, mushrooms, red onion, cherry tomato, black olives, rocket",
         "imgUrl": "/images/9.png"
     },
     {
         "id": 10,
         "name": "Funghi",
         "price": 2000,
+        "description": "Peeled tomato, cheese, mushrooms, red onion, cherry tomato, black olives, rocket",
         "imgUrl": "/images/10.png"
     }
 ]
