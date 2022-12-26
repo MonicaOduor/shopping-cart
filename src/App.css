@@ -40,11 +40,11 @@ body{
 .card{
   background: url('https://marcello.qodeinteractive.com/wp-content/themes/marcello/assets/img/noise.png');
 }
-.card-img{
+.card-img, .shopping-cart-img{
   transition: transform 0.3s;
 
 }
-.card-img:hover{
+.card-img, .shopping-cart-img:hover{
   transform: rotate(30deg);
 }
 .btn-outline{

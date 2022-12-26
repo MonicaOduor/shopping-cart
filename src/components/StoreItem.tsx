@@ -1,4 +1,5 @@
 import { Card } from "react-bootstrap";
+import { useShoppingCart } from "../context/ShoppingContext";
 import { formatCurrency } from "../utilities/formatCurrency";
 
 type StoreItemProps = {
@@ -9,7 +10,14 @@ type StoreItemProps = {
 };
 
 export default function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
-  const quantity = 0;
+  const {
+    getItemQuantity,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeFromCart,
+  } = useShoppingCart();
+
+  const quantity = getItemQuantity(id);
   return (
     <Card className="rounded-0 h-100" style={{ border: "1px solid #f43b00" }}>
       <Card.Img
@@ -28,7 +36,10 @@ export default function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
         </Card.Title>
         <div className="mt-auto">
           {quantity === 0 ? (
-            <button className="btn btn-outline rounded-0 w-100">
+            <button
+              className="btn btn-outline rounded-0 w-100"
+              onClick={() => increaseCartQuantity(id)}
+            >
               Add to cart
             </button>
           ) : (
@@ -40,11 +51,26 @@ export default function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
                 className="d-flex align-items-center justify-content-center"
                 style={{ gap: ".5rem" }}
               >
-                <button className="btn btn-outline rounded-0">-</button>
+                <button
+                  className="btn btn-outline rounded-0"
+                  onClick={() => decreaseCartQuantity(id)}
+                >
+                  -
+                </button>
                 <span>{quantity}</span>
-                <button className="btn btn-outline rounded-0">+</button>
+                <button
+                  className="btn btn-outline rounded-0"
+                  onClick={() => increaseCartQuantity(id)}
+                >
+                  +
+                </button>
               </div>
-              <button className="btn btn-sm btn-outline rounded-0">Remove</button>
+              <button
+                className="btn btn-sm btn-outline rounded-0"
+                onClick={() => removeFromCart(id)}
+              >
+                Remove
+              </button>
             </div>
           )}
         </div>

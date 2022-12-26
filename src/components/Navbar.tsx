@@ -1,13 +1,10 @@
-import {
-  GridView,
-  SickOutlined,
-  VaccinesOutlined,
-  Menu,
-} from "@mui/icons-material";
+import { Menu } from "@mui/icons-material";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import { useShoppingCart } from "../context/ShoppingContext";
 
 export default function Navigationbar() {
+  const { openCart, cartQuantity } = useShoppingCart();
   return (
     <Navbar className="navbar bg-white" expand="sm" sticky="top">
       <Container fluid>
@@ -28,7 +25,13 @@ export default function Navigationbar() {
             <NavLink className="navlinks" to="/about">
               About
             </NavLink>
-            <NavLink className="navlinks" to="">
+            <button
+              className="btn rounded-0"
+              onClick={openCart}
+              style={{
+                color: "#f43b00",
+              }}
+            >
               <span>Cart&nbsp;&nbsp;</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -45,8 +48,8 @@ export default function Navigationbar() {
                   fillRule="evenodd"
                 ></path>
               </svg>
-              <span>&nbsp; (3)</span>
-            </NavLink>
+              {cartQuantity > 0 && <span>&nbsp; ({cartQuantity})</span>}
+            </button>
           </Nav>
         </Navbar.Collapse>
       </Container>
