@@ -29,7 +29,7 @@ export default function CartItem({ id, quantity }: CartItemProps) {
         width={100}
         height={100}
         style={{ objectFit: "cover" }}
-        className="img-fluid shopping-cart-img"
+        className="img-fluid shopping-img"
       />
       <Stack>
         <h5>{item.name}</h5>

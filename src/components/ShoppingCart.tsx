@@ -20,24 +20,19 @@ export default function ShoppingCart({ isCartOpen }: ShoppingCartProps) {
           {cartItems.map((item) => (
             <CartItem key={item.id} {...item} />
           ))}
-          <div style={{ display: "block" }}>
-            <Stack gap={1} className="ms-auto">
-              <h4
-                className="d-flex justify-content-center p-3"
-                style={{ color: "#f43b00" }}
-              >
-                TOTAL:{" "}
-                {formatCurrency(
-                  cartItems.reduce((total, cartItem) => {
-                    const item = storeItems.find(
-                      (item) => item.id === cartItem.id
-                    );
-                    return total + (item?.price || 0) * cartItem.quantity;
-                  }, 0)
-                )}
-              </h4>
-            </Stack>
-          </div>
+
+          <h4
+            className="d-flex justify-content-center"
+            style={{ color: "#f43b00" }}
+          >
+            TOTAL:
+            {formatCurrency(
+              cartItems.reduce((total, cartItem) => {
+                const item = storeItems.find((item) => item.id === cartItem.id);
+                return total + (item?.price || 0) * cartItem.quantity;
+              }, 0)
+            )}
+          </h4>
         </Stack>
       </Offcanvas.Body>
     </Offcanvas>

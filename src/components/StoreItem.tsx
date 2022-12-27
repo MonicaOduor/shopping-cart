@@ -23,7 +23,7 @@ export default function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
       <Card.Img
         variant="top"
         src={imgUrl}
-        className="img-fluid card-img"
+        className="img-fluid shopping-img"
         style={{ objectFit: "cover" }}
       />
       <Card.Body className="d-flex flex-column">
