@@ -4,7 +4,7 @@ Welcome to Marcello, a simple and easy-to-use application for ordering pizza onl
 This shopping cart is built with React and TypeScript, and uses the Context API for managing state. Local storage is also implemented to save the user's cart items even after the page is refreshed.
 
 ## Demo
-You can try out the shopping cart by visiting the deployed version at [Insert URL here].
+You can try out the shopping cart by visiting the deployed version at [https://shopping-cart-smoky-tau.vercel.app/].
 
 ## Installation
 To run the shopping cart locally, follow these steps:
