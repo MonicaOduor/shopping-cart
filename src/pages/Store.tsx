@@ -6,7 +6,7 @@ export default function Store() {
   return (
     <Container>
       <br/><br/>
-      <Row md={3} xs={1} lg={4} className="g-4">
+      <Row md={2} xs={1} lg={3} className="g-4">
         {storeItems.map((item) => {
           return (
             <Col key={item.id}>

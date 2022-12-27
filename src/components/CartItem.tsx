@@ -1,6 +1,7 @@
 type CartItemProps = {
   id: number;
   quantity: number;
+  price: any;
 };
 
 import { Stack } from "react-bootstrap";
